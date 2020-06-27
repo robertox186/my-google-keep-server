@@ -1,0 +1,19 @@
+{
+  "name": "mygooglekeep",
+  "version": "1.0.0",
+  "description": "proyecto de moviles google keep",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertox186/my-google-keep-server.git"
+  },
+  "author": "Roberto Acosta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertox186/my-google-keep-server/issues"
+  },
+  "homepage": "https://github.com/robertox186/my-google-keep-server#readme"
+}
