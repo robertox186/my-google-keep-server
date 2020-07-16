@@ -12,7 +12,7 @@ module.exports.createUser= async (info)=>{
     
 var h=await  client.query(prop.insertUser,[info.names,info.email,info.password,info.edad,JSON.stringify([])]);
 client.end(); 
-return h
+return h;
      
 
 }

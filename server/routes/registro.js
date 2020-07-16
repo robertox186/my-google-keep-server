@@ -1,5 +1,5 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const app = express.Router();
@@ -10,7 +10,9 @@ app.post('/', function (req, res) {
 
     let info=req.body;
     console.log(info);
+    
     info.password=bcrypt.hashSync(info.password,10);
+    console.log(info.password)
     user.createUser(info).then(resp=>{
      let respt=resp.rows;
 
@@ -21,14 +23,18 @@ app.post('/', function (req, res) {
 
     }).catch(err=>{
 console.log("error "+err)
-      res.send({status:400,body:err});
+      res.send({status:408,body:err});
     })
 
 
 });
 
 
- 
+app.get('/',function(req,res){
+    console.log("hola")
+    res.send(200);
+    
+    })
 
 
 
